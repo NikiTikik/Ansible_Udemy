@@ -1,0 +1,13 @@
+---
+- name: Preconfig
+  hosts: demo
+  tasks:
+    - name: add packets
+      apt:
+        name:
+          - ca-certificates
+          - curl
+          - gnupg
+          - lsb-release
+        update-cache: true
+        cache_valid_time: 86400
